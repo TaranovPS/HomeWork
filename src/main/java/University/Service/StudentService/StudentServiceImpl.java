@@ -50,6 +50,7 @@ public class StudentServiceImpl implements StudentService{
     public List<StudentDTO> findByGroupName(String groupNumber) {
         return repository.findByGroupName(groupNumber)
                 .stream()
+                .sorted(Comparator.comparing(Student::getName))
                 .map(StudentDTO::new)
                 .collect(Collectors.toList());
     }
