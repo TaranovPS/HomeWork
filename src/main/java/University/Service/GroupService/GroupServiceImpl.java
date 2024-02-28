@@ -34,7 +34,10 @@ public class GroupServiceImpl implements GroupService{
 
     public void save(GroupDTO group) {
         Group newGroup = new Group();
+
         newGroup.setName(group.getName());
+        newGroup.setDateCreated(group.getDate());
+
         repository.save(newGroup);
     }
 }

@@ -56,7 +56,9 @@ public class StudentServiceImpl implements StudentService{
 
     public void addStudent(String groupName, StudentDTO studentDTO) {
         Student student = new Student();
+
         student.setName(studentDTO.getName());
+        student.setDateCreated(studentDTO.getDate());
 
         Group group = groupRepository.findByName(groupName);
 

@@ -33,7 +33,7 @@ public class Group {
     private String name;
 
     @Column(name = "date_created")
-    private LocalDateTime dateCreated =  LocalDateTime.now();
+    private LocalDateTime dateCreated;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "group_id")

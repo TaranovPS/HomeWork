@@ -31,7 +31,7 @@ public class Student {
     private String name;
 
     @Column(name = "date_created")
-    private LocalDateTime dateCreated =  LocalDateTime.now();
+    private LocalDateTime dateCreated;
 
     @ManyToOne()
     @JoinColumn(name = "group_id")
